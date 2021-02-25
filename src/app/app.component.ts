@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'scalatr0ne';
+
+  items = ['Apple', 'Banana', 'Orange'];
+  itemx: Observable<string>[] = []
+
+  newIngredient(e: Observable<string>) {
+    this.itemx.push(e)
+  }
 }

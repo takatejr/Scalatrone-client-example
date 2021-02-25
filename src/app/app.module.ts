@@ -3,14 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ButtonComponent } from './components/button/button.component';
+import { FormComponent } from './components/form/form.component';
+import { HomeComponent } from './components/home/home.component';
+import { WsconnectorResolver } from './resolvers/wsconnector/wsconnector.resolver';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ButtonComponent
+    FormComponent,
+    HomeComponent,
+
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule
   ],

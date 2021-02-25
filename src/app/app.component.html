@@ -8,4 +8,8 @@
 </div>
 
 <div>Scalatr0ne</div>
-<app-button></app-button>
+<app-button (clickedBtn)="newIngredient($event)"></app-button>
+
+<ul  *ngIf="itemx.length !== 0">
+  <li *ngFor="let item of itemx">{{item | async}}</li>
+</ul>
