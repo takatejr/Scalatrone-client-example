@@ -1,17 +1,19 @@
 import { Injectable } from '@angular/core';
 import {
-  Router, Resolve,
+  Resolve,
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
+import { WebsocketgateService } from '../../services/websocketgate.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class WsconnectorResolver implements Resolve<boolean> {
+  constructor(private wsGate: WebsocketgateService){}
+
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
-    console.log('wsConnector workz')
-    return of(true);
+      return this.wsGate.connect()
   }
 }
