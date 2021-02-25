@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  WS_ENDPOINT: "ws://localhost:8081/"
+  WS_ENDPOINT: "ws://localhost:9000/ws"
 };
 
 /*

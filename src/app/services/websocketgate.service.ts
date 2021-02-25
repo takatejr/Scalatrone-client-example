@@ -25,6 +25,7 @@ export class WebsocketgateService {
   }
   
   private getNewWebSocket() {
+    console.log('connected')
     return webSocket(environment.WS_ENDPOINT);
   }
 
