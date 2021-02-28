@@ -10,6 +10,9 @@
 <div>Scalatr0ne</div>
 <app-button (clickedBtn)="newIngredient($event)"></app-button>
 
-<ul  *ngIf="itemx.length !== 0">
-  <li *ngFor="let item of itemx">{{item | async}}</li>
+<ul *ngIf="itemx.length !== 0">
+  <li *ngFor="let item of itemx">
+    <div>{{ item | async }}</div>
+    <button (click)="sendMessages(item)">Send</button>
+  </li>
 </ul>

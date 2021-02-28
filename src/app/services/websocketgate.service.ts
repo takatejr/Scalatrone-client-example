@@ -4,7 +4,7 @@ import { webSocket, WebSocketSubject } from "rxjs/webSocket";
 import { catchError, map, tap } from 'rxjs/operators'
 import { environment } from '../../environments/environment';
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WebsocketgateService {
   public socket$!: WebSocketSubject<any>;
@@ -25,7 +25,6 @@ export class WebsocketgateService {
   }
   
   private getNewWebSocket() {
-    console.log('connected')
     return webSocket(environment.WS_ENDPOINT);
   }
 
