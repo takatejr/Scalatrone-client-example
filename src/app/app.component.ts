@@ -22,6 +22,6 @@ export class AppComponent {
   }
 
   sendMessages(msg: Observable<string>) {
-    msg.subscribe(el => this.wsGate.sendMessage({message: el}))
+    msg.subscribe(el => this.wsGate.sendMessage({message: el, UserID: 34}))
   }
 }
